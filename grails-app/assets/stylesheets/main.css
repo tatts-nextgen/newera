@@ -1,0 +1,24 @@
+body {
+    background-color: #000000;
+    color: #fff;
+}
+
+.green {
+    color: #54D940;
+}
+
+label {
+    color: #afafaf;
+    font-size: 10pt;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+i.checkmark {
+    color: #000;
+    display: none;
+}
