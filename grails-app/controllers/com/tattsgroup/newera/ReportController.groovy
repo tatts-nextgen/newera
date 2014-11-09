@@ -14,16 +14,21 @@ class ReportController {
     def registrationService
 
     def index() {
-        [registrationCount: registrationService.registrationCount]
+        [
+                registrationCount: registrationService.registrationCount,
+                mostRecentRegistrationDate: registrationService.mostRecentRegistrationDate
+        ]
     }
 
     def export() {
         final registrations = registrationService.allRegistrations
         final datestamp = DATESTAMP_FORMATTER.print(DateTime.now())
         new WebXlsxExporter(new ClassPathResource('/registrations-export-template.xlsx').file.absolutePath).with {
-            dateCellFormat = 'MMM d, yyyy, h:m'
+            dateCellFormat = 'MMM d, yyyy h:mm'
             setHeaders(response, "newera-registrations-${datestamp}.xlsx")
-            add(registrations, REGISTRATION_PROPERTIES)
+            sheet('New Era Registrations').with {
+                add(registrations, REGISTRATION_PROPERTIES)
+            }
             save(response.outputStream)
         }
     }

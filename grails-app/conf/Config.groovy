@@ -91,6 +91,7 @@ grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.plugin.springsecurity.debug.useFilter = false
     }
     production {
         grails.logging.jul.usebridge = false
@@ -117,21 +118,25 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
+    info   'grails.plugin.springsecurity.web.filter.DebugFilter'
+    //debug  'org.springframework.security'
 }
 
-
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.tattsgroup.newera.User'
+grails.plugin.springsecurity.userLookup.userDomainClassName    = 'com.tattsgroup.newera.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.tattsgroup.newera.UserRole'
-grails.plugin.springsecurity.authority.className = 'com.tattsgroup.newera.Role'
+grails.plugin.springsecurity.authority.className               = 'com.tattsgroup.newera.Role'
+grails.plugin.springsecurity.logout.afterLogoutUrl             = '/report'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
-	'/index':                         ['permitAll'],
+	'/index/**':                      ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
+    '/report/**':                     ['IS_AUTHENTICATED_REMEMBERED']
 ]
 

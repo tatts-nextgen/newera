@@ -87,9 +87,12 @@
                                         </g:eachError>
                                     </small>
                                 </label>
-                                <input type="email" required="true" id="email" name="email"
-                                       class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
-                                       value="${cmd?.email}" tabindex="1"/>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                    <input type="email" required="true" id="email" name="email"
+                                           class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
+                                           value="${cmd?.email}" tabindex="1"/>
+                                </div>
                             </div>
 
                             <%-- Name --%>
@@ -103,9 +106,12 @@
                                         </g:eachError>
                                     </small>
                                 </label>
-                                <input type="text" id="name" name="name" required="true"
-                                       class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
-                                       value="${cmd?.name}" tabindex="2"/>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" id="name" name="name" required="true"
+                                           class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
+                                           value="${cmd?.name}" tabindex="2"/>
+                                </div>
                             </div>
 
                             <%-- Phone --%>
@@ -120,9 +126,12 @@
                                         </g:eachError>
                                     </small>
                                 </label>
-                                <input type="text" id="phone" name="phone"
-                                       class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
-                                       value="${cmd?.phone}" tabindex="3"/>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                    <input type="text" id="phone" name="phone"
+                                           class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
+                                           value="${cmd?.phone}" tabindex="3"/>
+                                </div>
                             </div>
                         </div>
                     </div>

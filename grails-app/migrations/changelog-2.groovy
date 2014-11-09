@@ -1,35 +1,5 @@
 databaseChangeLog = {
 
-	changeSet(author: "jgaines (generated)", id: "1415491112131-1") {
-		createTable(tableName: "registration") {
-			column(autoIncrement: "true", name: "id", type: "bigint") {
-				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "registrationPK")
-			}
-
-			column(name: "version", type: "bigint") {
-				constraints(nullable: "false")
-			}
-
-			column(name: "date_created", type: "datetime") {
-				constraints(nullable: "false")
-			}
-
-			column(name: "email", type: "varchar(255)") {
-				constraints(nullable: "false")
-			}
-
-			column(name: "last_updated", type: "datetime") {
-				constraints(nullable: "false")
-			}
-
-			column(name: "name", type: "varchar(255)") {
-				constraints(nullable: "false")
-			}
-
-			column(name: "phone", type: "varchar(255)")
-		}
-	}
-
 	changeSet(author: "jgaines (generated)", id: "1415491112131-2") {
 		createTable(tableName: "role") {
 			column(autoIncrement: "true", name: "id", type: "bigint") {
@@ -96,12 +66,6 @@ databaseChangeLog = {
 
 	changeSet(author: "jgaines (generated)", id: "1415491112131-5") {
 		addPrimaryKey(columnNames: "role_id, user_id", constraintName: "user_rolePK", tableName: "user_role")
-	}
-
-	changeSet(author: "jgaines (generated)", id: "1415491112131-8") {
-		createIndex(indexName: "email_idx", tableName: "registration") {
-			column(name: "email")
-		}
 	}
 
 	changeSet(author: "jgaines (generated)", id: "1415491112131-9") {

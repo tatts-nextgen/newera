@@ -40,4 +40,13 @@ class RegistrationService {
     def getRegistrationCount() {
         Registration.count()
     }
+
+    /** Get the date of the most recent registration */
+    def getMostRecentRegistrationDate() {
+        Registration.withCriteria {
+            projections {
+                max 'dateCreated'
+            }
+        }?.getAt(0)
+    }
 }
