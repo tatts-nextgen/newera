@@ -77,9 +77,9 @@
                         <div class="col-xs-6 col-xs-offset-3">
 
                             <%-- Email --%>
-                            <div class="form-group">
-                                <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('email')}"/>
-                                <label for="email" class="${hasFieldErrors ? 'text-danger' : ''}">
+                            <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('email')}"/>
+                            <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
+                                <label for="email">
                                     EMAIL
                                     <small>
                                         <g:eachError bean="${cmd}" field="email">
@@ -89,15 +89,14 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                    <input type="email" required="true" id="email" name="email"
-                                           class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
-                                           value="${cmd?.email}" tabindex="1"/>
+                                    <input type="email" required="true" id="email" name="email" placeholder="Email"
+                                           class="form-control" value="${cmd?.email}" tabindex="1"/>
                                 </div>
                             </div>
 
                             <%-- Name --%>
-                            <div class="form-group">
-                                <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('name')}"/>
+                            <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('name')}"/>
+                            <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
                                 <label for="name" class="${hasFieldErrors ? 'text-danger' : ''}">
                                     NAME
                                     <small>
@@ -108,16 +107,16 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" id="name" name="name" required="true"
-                                           class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
-                                           value="${cmd?.name}" tabindex="2"/>
+                                    <input type="text" id="name" name="name" required="true" placeholder="Name"
+                                           class="form-control" value="${cmd?.name}" tabindex="2"/>
                                 </div>
                             </div>
 
                             <%-- Phone --%>
-                            <div class="form-group">
+                            <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('phone')}"/>
+                            <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
                                 <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('phone')}"/>
-                                <label for="phone" class="${hasFieldErrors ? 'text-danger' : ''}" style="width: 100%;">
+                                <label for="phone" style="width: 100%;">
                                     PHONE
                                     <span class="pull-right" style="color: #dfdfdf;">Optional</span>
                                     <small>
@@ -128,9 +127,8 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                                    <input type="text" id="phone" name="phone"
-                                           class="form-control ${hasFieldErrors ? 'alert alert-danger' : ''}"
-                                           value="${cmd?.phone}" tabindex="3"/>
+                                    <input type="text" id="phone" name="phone" placeholder="Phone"
+                                           class="form-control" value="${cmd?.phone}" tabindex="3"/>
                                 </div>
                             </div>
                         </div>
