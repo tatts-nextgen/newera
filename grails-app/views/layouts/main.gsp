@@ -13,6 +13,9 @@
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
   		<asset:stylesheet src="application.css"/>
+        <script type='text/javascript'
+                src="//assets.adobedtm.com/bdbce93feabc14b4505e00fc5e003a3b12e347fc/satelliteLib-0f5e05a7db7801e1eca20a5762932835f2cb1b53.js">
+        </script>
 		<g:layoutHead/>
 	</head>
 	<body>
@@ -20,5 +23,7 @@
             <g:layoutBody/>
         </div>
         <asset:javascript src="application.js"/>
+        <g:pageProperty name="page.scripts"/>
+        <script type="text/javascript">_satellite.pageBottom();</script>
 	</body>
 </html>

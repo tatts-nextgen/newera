@@ -22,3 +22,8 @@ i.checkmark {
     color: #000;
     display: none;
 }
+
+div.checkable-label {
+    cursor: pointer;
+    font-size: 9pt;
+}
