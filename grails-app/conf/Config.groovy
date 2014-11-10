@@ -140,3 +140,10 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/report/**':                     ['IS_AUTHENTICATED_REMEMBERED']
 ]
 
+jasypt {
+    algorithm = "PBEWITHSHA256AND256BITAES-CBC-BC"
+    providerName = "BC"
+    password = "ErstwhileBloviation"
+    keyObtentionIterations = 1000
+}
+

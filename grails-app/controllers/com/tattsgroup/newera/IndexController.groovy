@@ -19,6 +19,10 @@ class IndexController {
             render view: 'index', model: [cmd: cmd]
         }
     }
+
+    def privacyStatement() {
+
+    }
 }
 
 class RegistrationCommand {

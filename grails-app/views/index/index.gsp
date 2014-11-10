@@ -181,8 +181,12 @@
                         </div>
                         <div class="col-xs-5 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
                             I have read and agree to the
+                            <g:link action="privacyStatement" target="_blank">
+                                Privacy Statement
+                            </g:link>
+                            and
                             <a href="http://www.tattsgroup.com/legal/privacy" target="_blank">
-                                Privacy Statement and Privacy Policy
+                                Privacy Policy
                             </a>
                             of Tatts Group Limited
                         </div>

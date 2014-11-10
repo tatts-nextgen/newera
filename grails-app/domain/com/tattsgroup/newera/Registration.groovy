@@ -1,6 +1,8 @@
 package com.tattsgroup.newera
 
-/** A visitor has registered for more information */
+import com.bloomhealthco.jasypt.GormEncryptedStringType
+
+/** A visitor has registered for more information.  Store encrypted. */
 class Registration {
 
     Date dateCreated
@@ -10,15 +12,19 @@ class Registration {
     String phone
 
     static constraints = {
-        name nullable: false, blank: false
-        email nullable: false, blank: false, email: true
-        phone nullable: true, blank: true
+        name nullable: false, blank: false, size: 1..2000
+        email nullable: false, blank: false, email: true, size: 1..2000
+        phone nullable: true, blank: true, size: 1..2000
     }
 
     static mapping = {
-        email index: 'email_idx'
+        name type: GormEncryptedStringType
+        email type: GormEncryptedStringType
+        phone type: GormEncryptedStringType
+
     }
 
+    /** Extracts given or first name from full name */
     String getGivenName() {
         try {
             (name =~ /(.*?)(?: .*)* (.*)/)[0][1]
@@ -27,6 +33,7 @@ class Registration {
         }
     }
 
+    /** Extracts surname or last name from full name */
     String getSurname() {
         try {
             (name =~ /(.*?)(?: .*)* (.*)/)[0][2]

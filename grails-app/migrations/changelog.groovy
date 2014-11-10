@@ -1,5 +1,5 @@
 databaseChangeLog = {
-    (1..2).each {
+    (1..1).each {
         include file: "changelog-${it}.groovy"
     }
 }
