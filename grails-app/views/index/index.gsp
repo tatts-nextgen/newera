@@ -30,11 +30,16 @@
         <p style="position: relative; top: -90px; cursor: pointer;" data-toggle="modal" data-target="#myModal">HEAR<br/>MORE</p>
     </div>
 </div>
-<div class="row" style="margin-top: 50px;">
+<div class="row" style="margin-top: 50px; margin-bottom: 50px;">
     <div class="col-xs-12 text-center green" style="font-size: 18pt;">
         Coming soon. Watch this space.
     </div>
 </div>
+<footer style="text-align: center; color: #5f5f58;">
+    <p>Think! About your choices.</p>
+    <p>Call your state based gambling help services on 1800 858 858.  In NSW visit www.gamblinghelp.nsw.gov.au.</p>
+    <p>In WA visit www.gamblinghelponline.org.au.  Think of the people who need your support.  Gamble Responsibly.</p>
+</footer>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
         data-backdrop="static">
     <div class="modal-dialog">
@@ -50,8 +55,8 @@
                     <i class="fa fa-circle-thin" style="color: #54D940; font-size: 75pt;"></i>
                     <i class="fa fa-envelope"
                        style="color: #54D940; font-size: 20pt; display: block; position: relative; top: -65px;"></i>
-                    <p style="color: #afafaf; font-size: 18pt; margin-top: -5px; padding-bottom: 75px; border-bottom: solid 1px #afafaf;">
-                        Sign up
+                    <p style="color: #afafaf; font-size: 18pt; margin-top: -5px; padding-bottom: 25px;">
+                        Sign up to hear more
                     </p>
                 </div>
                 <g:form action="register" role="form">
@@ -116,9 +121,8 @@
                             <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('phone')}"/>
                             <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
                                 <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('phone')}"/>
-                                <label for="phone" style="width: 100%;">
-                                    PHONE
-                                    <span class="pull-right" style="color: #dfdfdf;">Optional</span>
+                                <label for="phone">
+                                    PHONE <span style="color: #dfdfdf;">(Optional)</span>
                                     <small>
                                         <g:eachError bean="${cmd}" field="phone">
                                             <br/><g:message error="${it}"/>
@@ -151,7 +155,7 @@
                         <div class="col-xs-1 col-xs-offset-3 vcenter">
                             <span class="fa-stack" data-hidden-field="over18">
                                 <i id='over18-checkable' class="fa fa-square-o checkable fa-stack-2x" tabindex="4"></i>
-                                <i class="fa fa-check checkmark fa-stack-1x"></i>
+                                <i class="fa fa-check checkmark green fa-stack-1x"></i>
                             </span>
                         </div>
                         <div class="col-xs-5 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
@@ -176,7 +180,7 @@
                         <div class="col-xs-1 col-xs-offset-3 vcenter">
                             <span class="fa-stack" data-hidden-field="privacy">
                                 <i id='privacy-checkable' class="fa fa-square-o checkable fa-stack-2x" tabindex="5"></i>
-                                <i class="fa fa-check checkmark fa-stack-1x"></i>
+                                <i class="fa fa-check checkmark green fa-stack-1x"></i>
                             </span>
                         </div>
                         <div class="col-xs-5 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">

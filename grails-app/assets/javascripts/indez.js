@@ -7,13 +7,13 @@ $(function () {
     // Simulate checkboxes with nicer-looking font-awesome icons
     $('i.checkable').click(function() {
         var t = $(this)
-        t.removeClass('fa-square-o').addClass('fa-square').addClass('green')
+        t.removeClass('fa-square-o').addClass('fa-square').addClass('black')
         t.next('i').show()
         setCorrespondingHiddenFieldValue(t, 'true')
     })
     $('i.checkmark').click(function() {
         var t = $(this)
-        t.prev('i').addClass('fa-square-o').removeClass('fa-square').removeClass('green')
+        t.prev('i').addClass('fa-square-o').removeClass('fa-square').removeClass('black')
         t.hide()
         setCorrespondingHiddenFieldValue(t, '')
     })
@@ -27,6 +27,11 @@ $(function () {
         } else {
             prevDiv.find('i.checkable').click()
         }
+    })
+
+    // don't tick or untick the checkboxes if the user clicks the privacy links embedded in the checkbox labels
+    $('div.checkable-label a').click(function(e) {
+        e.stopPropagation()
     })
 
     if ($('#over18').val()) {
