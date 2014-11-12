@@ -52,9 +52,10 @@
             </div>
             <div class="modal-body" style="margin-top: 10px;">
                 <div class="text-center">
-                    <i class="fa fa-circle-thin" style="color: #54D940; font-size: 75pt;"></i>
-                    <i class="fa fa-envelope"
-                       style="color: #54D940; font-size: 20pt; display: block; position: relative; top: -65px;"></i>
+                    <span class="fa-stack fa-5x green">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-envelope fa-stack-1x"></i>
+                    </span>
                     <p style="color: #afafaf; font-size: 18pt; margin-top: -5px; padding-bottom: 25px;">
                         Register to hear more
                     </p>
@@ -203,9 +204,8 @@
 
                     <div class="row">
                         <div class="col-xs-offset-3 col-xs-6">
-                            <input id='submit' class="btn" disabled="disabled" type="submit"
-                                   style="background-color: #afafaf; color: #000; margin-bottom: 25px; width: 100%;"
-                                   value="SUBMIT"/>
+                            <input id='submit' class="btn green-background" disabled="disabled" type="submit"
+                                   style="color: #fff; margin-bottom: 25px; width: 100%;" value="SUBMIT"/>
                         </div>
                     </div>
                 </g:form>

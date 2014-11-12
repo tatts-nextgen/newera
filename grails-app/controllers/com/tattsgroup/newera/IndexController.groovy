@@ -13,16 +13,16 @@ class IndexController {
                 cmd.errors.reject registrationError
                 render view: 'index', model: [cmd: cmd]
             } else {
-                [cmd: cmd]
+                redirect action: 'success'
             }
         } else {
             render view: 'index', model: [cmd: cmd]
         }
     }
 
-    def privacyStatement() {
+    def success() { }
 
-    }
+    def privacyStatement() { }
 }
 
 class RegistrationCommand {

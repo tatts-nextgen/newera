@@ -1,10 +1,15 @@
 body {
     background-color: #343434;
     color: #fff;
+    font-family: LLReplicaProWeb, Arial, sans-serif;
 }
 
 .green {
-    color: #54D940;
+    color: #53da3f;
+}
+
+.green-background {
+    background-color: #53da3f;
 }
 
 .black {
@@ -29,4 +34,37 @@ i.checkmark {
 div.checkable-label {
     cursor: pointer;
     font-size: 9pt;
+}
+
+.modal-icon {
+    width: 58px;
+    height: 58px;
+}
+
+.modal-heading {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.modal-text {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 100;
+    padding: 15px 20px;
+    color: #6f6f6f;
+}
+
+.modal-close {
+    font-size: 20px;
+    color: #9d9d9d;
+}
+
+hr.big {
+    margin: 30px 0;
+}
+
+span.close {
+    opacity: 1.0;
 }

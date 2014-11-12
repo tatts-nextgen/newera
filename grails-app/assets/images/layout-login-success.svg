@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="220px" height="220px"
+	 viewBox="0 0 220 220" enable-background="new 0 0 220 220" xml:space="preserve">
+<title>layout-login-success</title>
+<desc>Created with Sketch.</desc>
+<g id="UI" sketch:type="MSPage">
+	<g id="WEB" transform="translate(-161.000000, -645.000000)" sketch:type="MSArtboardGroup">
+		<g id="layout-login-success" transform="translate(261.000000, 645.000000)" sketch:type="MSLayerGroup">
+			<path fill="#53DA3F" d="M10.083,0.167c-60.704,0-109.917,49.211-109.917,109.917C-99.833,170.789-50.621,220,10.083,220
+				C70.788,220,120,170.789,120,110.083C120,49.378,70.788,0.167,10.083,0.167z M10.083,210.841
+				c-55.645,0-100.757-45.11-100.757-100.758c0-55.646,45.112-100.757,100.757-100.757c55.646,0,100.758,45.111,100.758,100.757
+				C110.841,165.73,65.729,210.841,10.083,210.841z"/>
+			<path id="Path-606" sketch:type="MSShapeGroup" fill="#53DA3F" d="M-2.255,137.52c2.31,2.222,6.047,1.898,7.941-0.686
+				l41.634-56.796c1.729-2.359,1.219-5.672-1.139-7.4c-2.36-1.729-5.674-1.219-7.402,1.139l-41.633,56.795l7.939-0.685l-19.01-18.29
+				c-2.107-2.027-5.46-1.962-7.489,0.145c-2.025,2.107-1.961,5.46,0.146,7.486L-2.255,137.52z"/>
+		</g>
+	</g>
+</g>
+</svg>
