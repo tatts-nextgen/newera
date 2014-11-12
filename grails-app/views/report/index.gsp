@@ -9,31 +9,41 @@
     </div>
 </div>
 <div class="row" style="margin-top: 100px;">
-    <div class="col-xs-10 col-xs-offset-2">
-        <dl class="dl-horizontal">
-            <dt>Registrations to date</dt>
-            <dd><g:formatNumber number="${registrationCount}" format="###,###,##0"/> </dd>
-            <dt>Most recent registration</dt>
-            <dd><g:formatDate date="${mostRecentRegistrationDate}" format="MMM d, yyyy, h:mm:ss"/> </dd>
-            <dt>User</dt>
-            <dd><sec:username/></dd>
-            <dt>IP Address</dt>
-            <dd>${request.remoteAddr}</dd>
-            <dt>Application Version</dt>
-            <dd><g:meta name="app.version"/></dd>
-        </dl>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-10 col-xs-offset-2">
-        <g:link action="export">Download Registrations</g:link>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-10 col-xs-offset-2">
-        <g:form controller="logout" method="post" role="form">
-            <input type="submit" class="btn btn-link" style="padding-left: 0;" value="Logout"/>
-        </g:form>
+    <div class="col-xs-4 col-xs-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-body" style="color: #000;">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge"><g:formatNumber number="${registrationCount}" format="###,###,##0"/></span>
+                        Registrations to date
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><g:formatDate date="${mostRecentRegistrationDate}" format="MMM d, yyyy, h:mm:ss"/></span>
+                        Most recent registration
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><sec:username/></span>
+                        User
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">${request.remoteAddr}</span>
+                        IP Address
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><g:meta name="app.version"/></span>
+                        Application Version
+                    </li>
+                    <li class="list-group-item">
+                        <g:link action="export">Download Registrations</g:link>
+                    </li>
+                    <li class="list-group-item">
+                        <g:form controller="logout" method="post" role="form">
+                            <input type="submit" class="btn btn-link" style="padding-left: 0;" value="Logout"/>
+                        </g:form>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
