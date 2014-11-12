@@ -18,6 +18,7 @@ class BootStrap {
             UserRole.create(_user, _role, true)
         }
 
+        // verify encryption support
         try {
             final allowedKeyLength = Cipher.getMaxAllowedKeyLength('AES')
             log.info "Max allowed AES key length is $allowedKeyLength"
