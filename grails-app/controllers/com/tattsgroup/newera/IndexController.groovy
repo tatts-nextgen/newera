@@ -33,10 +33,6 @@ class RegistrationCommand {
     Boolean privacy
 
     static constraints = {
-        name nullable: false, blank: false
-        email nullable: false, blank: false, email: true
-        phone nullable: true, blank: true
-        over18: validator: { it == 'true' }
-        privacy: validator: { it == 'true' }
+        importFrom Registration
     }
 }

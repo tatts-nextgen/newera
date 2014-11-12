@@ -56,7 +56,7 @@
                     <i class="fa fa-envelope"
                        style="color: #54D940; font-size: 20pt; display: block; position: relative; top: -65px;"></i>
                     <p style="color: #afafaf; font-size: 18pt; margin-top: -5px; padding-bottom: 25px;">
-                        Sign up to hear more
+                        Register to hear more
                     </p>
                 </div>
                 <g:form action="register" role="form">
@@ -70,8 +70,13 @@
                                     <div class="col-xs-1" style="padding-left: 0;">
                                         <i class="fa fa-warning"></i>
                                     </div>
-                                    <div class="col-xs-10" style="padding-left: 0;">
+                                    <div class="col-xs-11" style="padding-left: 0;">
                                         Some information is missing or incorrect.  Please try again.
+                                        <ul>
+                                        <g:each in="${cmd.errors.globalErrors}">
+                                            <li><g:message error="${it}"/></li>
+                                        </g:each>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +89,7 @@
                             <%-- Email --%>
                             <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('email')}"/>
                             <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
-                                <label for="email">
+                                <label class="control-label" for="email">
                                     EMAIL
                                     <small>
                                         <g:eachError bean="${cmd}" field="email">
@@ -94,7 +99,7 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                    <input type="email" required="true" id="email" name="email" placeholder="Email"
+                                    <input typex="email" required="true" id="email" name="email" placeholder="Email"
                                            class="form-control" value="${cmd?.email}" tabindex="1"/>
                                 </div>
                             </div>
@@ -102,7 +107,7 @@
                             <%-- Name --%>
                             <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('name')}"/>
                             <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
-                                <label for="name" class="${hasFieldErrors ? 'text-danger' : ''}">
+                                <label class="control-label" for="name">
                                     NAME
                                     <small>
                                         <g:eachError bean="${cmd}" field="name">
@@ -121,8 +126,8 @@
                             <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('phone')}"/>
                             <div class="form-group ${hasFieldErrors ? 'has-error' : ''}">
                                 <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('phone')}"/>
-                                <label for="phone">
-                                    PHONE <span style="color: #dfdfdf;">(Optional)</span>
+                                <label class="control-label" for="phone">
+                                    MOBILE <span style="color: #dfdfdf;">(Optional)</span>
                                     <small>
                                         <g:eachError bean="${cmd}" field="phone">
                                             <br/><g:message error="${it}"/>

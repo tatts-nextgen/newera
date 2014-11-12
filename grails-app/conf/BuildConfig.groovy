@@ -25,6 +25,7 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
+        mavenRepo 'http://repo.grails.org/grails/core'
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo 'http://repository.codehaus.org'
         //mavenRepo 'http://download.java.net/maven/2/'
@@ -32,7 +33,8 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        compile 'joda-time:joda-time:2.5'
+        compile 'joda-time:joda-time:2.5',
+                'commons-beanutils:commons-beanutils:1.8.3'
 
         runtime 'mysql:mysql-connector-java:5.1.33'
 
@@ -48,7 +50,7 @@ grails.project.dependency.resolution = {
                 ':cache:1.1.8',
                 ':asset-pipeline:1.9.9',
                 ':twitter-bootstrap:3.3.0',
-                ':excel-export:0.2.1',
+                ':export:1.6',
                 ':spring-security-core:2.0-RC4',
                 ':jasypt-encryption:1.3.1'
 

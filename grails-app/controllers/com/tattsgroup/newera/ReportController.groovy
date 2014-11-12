@@ -1,18 +1,37 @@
 package com.tattsgroup.newera
 
-import org.codehaus.groovy.grails.io.support.ClassPathResource
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
-import pl.touk.excel.export.WebXlsxExporter
 
+/** Report on registrations */
 class ReportController {
 
+    /** Format the name of the downloaded registrations file */
     static final DATESTAMP_FORMATTER = DateTimeFormat.forPattern('YYYYMMddhhmmss')
 
-    static final REGISTRATION_PROPERTIES = ['name', 'givenName', 'surname', 'email', 'phone', 'dateCreated']
+    /** Fields and column headers to export */
+    static final HEADERS = [
+            name: 'Full Name',
+            givenName: 'First Name',
+            surname: 'Last Name',
+            email: 'Email',
+            normalizedPhone: 'Mobile Phone',
+            dateCreated: 'Date/Time Submitted'
+    ]
+    static final FIELDS = HEADERS.keySet() as List
+
+    /** Format the date/time submitted field */
+    static final DATEFIELD_FORMATTER = DateTimeFormat.forPattern('HH:mm ddMMYYYY')
+    static final DATEFIELD_FORMAT_CLOSURE = { registration, dateCreated ->
+        DATEFIELD_FORMATTER.print(new DateTime(dateCreated))
+    }
+    static final FORMATTERS = [dateCreated: DATEFIELD_FORMAT_CLOSURE]
 
     def registrationService
 
+    def exportService
+
+    /** Render the reports page with some useful key stats */
     def index() {
         [
                 registrationCount: registrationService.registrationCount,
@@ -20,16 +39,12 @@ class ReportController {
         ]
     }
 
+    /** Export registrations to a CSV file */
     def export() {
         final registrations = registrationService.allRegistrations
         final datestamp = DATESTAMP_FORMATTER.print(DateTime.now())
-        new WebXlsxExporter(new ClassPathResource('/registrations-export-template.xlsx').file.absolutePath).with {
-            dateCellFormat = 'MMM d, yyyy h:mm'
-            setHeaders(response, "newera-registrations-${datestamp}.xlsx")
-            sheet('New Era Registrations').with {
-                add(registrations, REGISTRATION_PROPERTIES)
-            }
-            save(response.outputStream)
-        }
+        response.contentType = 'text/csv'
+        response.setHeader('Content-disposition', "attachment;filename=registrations-${datestamp}.csv")
+        exportService.export('csv', response.outputStream, registrations, FIELDS, HEADERS, FORMATTERS, [:])
     }
 }

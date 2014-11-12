@@ -22,7 +22,7 @@ class BootStrap {
             final allowedKeyLength = Cipher.getMaxAllowedKeyLength('AES')
             log.info "Max allowed AES key length is $allowedKeyLength"
             if (allowedKeyLength <= 256) {
-                log.error "Max allowed AES key length is too short! JASYPT probably won't work."
+                log.error "Max allowed AES key length $allowedKeyLength is too short! JASYPT probably won't work."
             }
         } catch (NoSuchAlgorithmException e) {
             log.error 'No AES encryption algorithm installed!', e
