@@ -26,8 +26,6 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    _satellite.track('formcapture')
-</script>
+<asset:javascript src="register.js"/>
 </body>
 </html>

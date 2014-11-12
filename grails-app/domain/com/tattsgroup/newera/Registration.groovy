@@ -6,6 +6,30 @@ import org.apache.commons.lang.StringUtils
 /** A visitor has registered for more information.  Store encrypted. */
 class Registration {
 
+    static final TITLES = [
+            'Mr',
+            'Ms',
+            'Mrs',
+            'Miss',
+            'Master',
+            'Doctor',
+            'Dr',
+            'Professor',
+            'Prof',
+            'Reverend',
+            'Rev',
+            'Attorney',
+            'Atty',
+            'Governor',
+            'Gov',
+            'Officer',
+            'Ofc',
+            'President',
+            'Pres'
+    ]
+
+    static final TITLES_WITH_PERIODS = TITLES.collect { "${it}." as String}
+
     Date dateCreated
     Date lastUpdated
     String name
@@ -25,22 +49,45 @@ class Registration {
 
     }
 
-    /** Extracts given or first name from full name */
+    /**
+     * Extracts given or first name from full name.
+     * Break the full name up into space-delimited text blocks.
+     * Ignore first text block if it's a title.
+     * Use full name if there's only one text block.
+     */
     String getGivenName() {
-        try {
-            (name =~ /(.*?)(?: .*)* (.*)/)[0][1]
-        } catch (IndexOutOfBoundsException e) {
-            ''
+        if (StringUtils.isBlank(name)) {
+            return name
         }
+
+        final splitName = name.split('\\s')
+
+        final candidateGivenName = splitName[0]
+
+        if (splitName.length < 3) {
+            return candidateGivenName
+        }
+
+        if (TITLES.contains(candidateGivenName) || TITLES_WITH_PERIODS.contains(candidateGivenName)) {
+            return splitName[1]
+        }
+
+        return candidateGivenName
     }
 
     /** Extracts surname or last name from full name */
     String getSurname() {
-        try {
-            (name =~ /(.*?)(?: .*)* (.*)/)[0][2]
-        } catch (IndexOutOfBoundsException e) {
-            ''
+        if (StringUtils.isBlank(name)) {
+            return name
         }
+
+        final splitName = name.split('\\s')
+
+        if (splitName.length == 1) {
+            return ''
+        }
+
+        return splitName[-1]
     }
 
     String getNormalizedPhone() {

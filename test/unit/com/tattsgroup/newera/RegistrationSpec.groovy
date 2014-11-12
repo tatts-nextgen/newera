@@ -51,4 +51,27 @@ class RegistrationSpec extends Specification {
         '0429 999 999'        | '61429999999'
         '0429999999'          | '61429999999'
     }
+
+    @Unroll
+    void 'First name works'() {
+        when:
+        Registration registration = new Registration(name: name)
+
+        then:
+        registration.givenName == givenName
+
+        and:
+        registration.surname == surname
+
+        where:
+
+        name                     | givenName | surname
+        'Jerry Gaines'           | 'Jerry'   | 'Gaines'
+        'Jerry'                  | 'Jerry'   | ''
+        'Dr. Jerry Gaines'       | 'Jerry'   | 'Gaines'
+        "Mr Jerry O'Toole"       | 'Jerry'   | "O'Toole"
+        'Professor Jerry Gaines' | 'Jerry'   | 'Gaines'
+        'Doctor Jerry Gaines'    | 'Jerry'   | 'Gaines'
+
+    }
 }

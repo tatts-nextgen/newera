@@ -84,7 +84,7 @@
                     </g:if>
 
                     <div class="row">
-                        <div class="col-xs-6 col-xs-offset-3">
+                        <div class="col-sm-6 col-sm-offset-3 col-xs-12">
 
                             <%-- Email --%>
                             <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('email')}"/>
@@ -147,7 +147,7 @@
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('over18')}"/>
                     <g:if test="${hasFieldErrors}">
                         <div class="row text-danger">
-                            <div class="col-xs-offset-3 col-xs-6">
+                            <div class="col-sm-6 col-sm-offset-3 col-xs-12">
                                 <small>
                                     <g:eachError bean="${cmd}" field="over18">
                                         <br/><g:message error="${it}"/>
@@ -157,13 +157,13 @@
                         </div>
                     </g:if>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
-                        <div class="col-xs-1 col-xs-offset-3 vcenter">
+                        <div class="col-xs-1 col-sm-offset-3 vcenter">
                             <span class="fa-stack" data-hidden-field="over18">
                                 <i id='over18-checkable' class="fa fa-square-o checkable fa-stack-2x" tabindex="4"></i>
                                 <i class="fa fa-check checkmark green fa-stack-1x"></i>
                             </span>
                         </div>
-                        <div class="col-xs-5 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
+                        <div class="col-sm-5 col-xs-9 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
                             I confirm that I am over 18 years of age
                         </div>
                     </div>
@@ -182,13 +182,13 @@
                         </div>
                     </g:if>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
-                        <div class="col-xs-1 col-xs-offset-3 vcenter">
+                        <div class="col-xs-1 col-sm-offset-3 vcenter">
                             <span class="fa-stack" data-hidden-field="privacy">
                                 <i id='privacy-checkable' class="fa fa-square-o checkable fa-stack-2x" tabindex="5"></i>
                                 <i class="fa fa-check checkmark green fa-stack-1x"></i>
                             </span>
                         </div>
-                        <div class="col-xs-5 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
+                        <div class="col-sm-5 col-xs-9  vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
                             I have read and agree to the
                             <g:link action="privacyStatement" target="_blank">
                                 Privacy Statement
