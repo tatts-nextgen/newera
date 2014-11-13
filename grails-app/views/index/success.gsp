@@ -28,9 +28,9 @@
             </div>
             <div class="modal-body" style="margin-top: 10px;">
                 <div class="text-center">
-                    <asset:image src="layout-login-success.svg" class="modal-icon" style="margin-bottom: 60px;"/>
+                    <asset:image src="layout-login-success.svg" class="modal-icon" style="margin-bottom: 60px; width: 120px; height: 120px;"/>
 
-                    <p class='green modal-heading'>
+                    <p class='green modal-heading' style="font-size: 18pt;">
                         Success!
                     </p>
                     <p class="modal-text">

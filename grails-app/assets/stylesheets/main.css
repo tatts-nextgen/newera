@@ -1,7 +1,24 @@
+@font-face {
+    font-family: ReplicaPro;
+    src: url(fonts/ReplicaProLight.otf);
+}
+
+@font-face {
+    font-family: ReplicaPro;
+    src: url(fonts/ReplicaProBold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: ReplicaPro;
+    src: url(fonts/ReplicaProItalic.otf);
+    font-style: italic;
+}
+
 body {
     background-color: #343434;
     color: #fff;
-    font-family: LLReplicaProWeb, Arial, sans-serif;
+    font-family: ReplicaPro, Arial, sans-serif;
 }
 
 .green {
@@ -10,6 +27,10 @@ body {
 
 .green-background {
     background-color: #53da3f;
+}
+
+a, a:hover, a:focus {
+    color: #53da3f;
 }
 
 .black {
@@ -67,4 +88,53 @@ hr.big {
 
 span.close {
     opacity: 1.0;
+}
+
+.btn[disabled], .btn.disabled {
+    background-color: #f4f4f4;
+    color: #919191;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.error span.help-block {
+    color: #e73d3e;
+}
+
+.error input {
+    background-color: #fad8d8;
+    border-color: #fad8d8;
+}
+
+.error span.input-group-addon {
+    border-color: #fad8d8;
+}
+
+.checkable-label {
+    font-size: 8pt;
+}
+
+input[type=text], input[type=email], span.input-group-addon, i.fa-square {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+span.input-group-addon {
+    background-color: #fff;
+    color: #53da3f;
+}
+
+#hearMore {
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    padding-top: 7px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
 }

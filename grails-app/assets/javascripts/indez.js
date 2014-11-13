@@ -19,7 +19,7 @@ $(function () {
     })
 
     // make text to the right of checkboxes behave like labels
-    $('div.checkable-label').click(function() {
+    $('.checkable-label').click(function() {
         var prevDiv = $(this).prev('div')
         var checkmark = prevDiv.find('i.checkmark')
         if (checkmark.is(':visible')) {
@@ -30,7 +30,7 @@ $(function () {
     })
 
     // don't tick or untick the checkboxes if the user clicks the privacy links embedded in the checkbox labels
-    $('div.checkable-label a').click(function(e) {
+    $('.checkable-label a').click(function(e) {
         e.stopPropagation()
     })
 
