@@ -8,18 +8,48 @@
 <body>
 
 <div class="row" style="margin-top: 100px;">
-    <div class="col-xs-12 text-center green" style="font-size: 22pt;">
+    <div class="col-xs-12 text-center green" style="font-size: 22pt; font-weight: bold;">
         WELCOME
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-12 text-center" style="font-size: 38pt;">
+    <div class="col-xs-12 text-center" style="font-size: 38pt; font-weight: bold;">
         READY FOR A NEW ERA<br/>IN BETTING?
     </div>
 </div>
+<div class="row" style="margin-top: 20px;">
+    <div class="col-xs-offset-3 col-xs-6" style="background-color: white; height: 200px;">&nbsp;</div>
+</div>
+<div class='row' style="margin-top: 20px; margin-bottom: 50px;">
+    <div class="col-xs-12 text-center">
+        <p id="hearMore" data-toggle="modal" data-target="#myModal">
+            <br/>HEAR<br/>MORE
+        </p>
+    </div>
+</div>
+<div class="row" style="margin-bottom: 50px;">
+    <div class="col-xs-12 text-center green" style="font-size: 18pt;">
+        Coming soon. Watch this space.
+    </div>
+</div>
+<footer style="text-align: center; color: #5f5f58;">
+    <p>Think! About your choices.</p>
+    <p>Call your state based gambling help services on 1800 858 858.  In NSW visit
+        <a href="http://www.gamblinghelp.nsw.gov.au" target="_blank" style="color: #5f5f58;">
+            www.gamblinghelp.nsw.gov.au
+        </a>.
+    </p>
+    <p>In WA visit
+        <a href="http://www.gamblinghelponline.org.au" target="_blank" style="color: #5f5f58;">
+            www.gamblinghelponline.org.au
+        </a>.
+    Think of the people who need your support.  Gamble Responsibly.
+    </p>
+</footer>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="height: 625px;">
             <div class="modal-header" style="border-bottom: none;">
                 <span class="close" data-dismiss="modal">
                     <span aria-hidden="true" class="modal-close">X</span>
