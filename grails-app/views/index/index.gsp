@@ -136,7 +136,7 @@
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('over18')}"/>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
                         <div class="col-sm-offset-3 col-xs-1 vcenter">
-                            <div class="pseudocheckbox" data-hidden-field="over18">
+                            <div class="pseudocheckbox" data-hidden-field="over18" tabindex="4">
                                 <i class="fa fa-check checkmark green"></i>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('privacy')}"/>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
                         <div class="col-sm-offset-3 col-xs-1 vcenter">
-                            <div class="pseudocheckbox" data-hidden-field="privacy">
+                            <div class="pseudocheckbox" data-hidden-field="privacy" tabindex="5">
                                 <i class="fa fa-check checkmark green"></i>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                     <div class="row" style="margin-top: 15px;">
                         <div class="col-xs-offset-3 col-xs-6">
                             <input id='submit' class="btn green-background" disabled="disabled" type="submit"
-                                   style="margin-bottom: 25px; width: 100%;" value="SUBMIT"/>
+                                   style="margin-bottom: 25px; width: 100%;" value="SUBMIT" tabindex="6"/>
                         </div>
                     </div>
                 </g:form>
