@@ -14,6 +14,8 @@ $(function () {
         } else {
             setHiddenField(hiddenField, t)
         }
+    }).keypress(function() { // makes it behave like a normal checkbox, where you can press a key to set/unset it
+        $(this).click()
     })
 
     // Checkmark, when visible, is in front of the div and "intercepts" the click event
@@ -34,10 +36,19 @@ $(function () {
         }
     })
 
+    // put focus in the first error field, or the email field if there are no error fields, when the modal is shown
+    var errorFields = $('div.error').find('input')
+    var focusField = (errorFields.length == 0) ? $('#email') : errorFields[0]
+    $('#myModal').on('shown.bs.modal', function() {
+        focusField.focus()
+    })
+
+    // on page load, make the over18 pseudocheckbox visually reflect the value of the hidden field ...
     if ($('#over18').val()) {
         setHiddenField($('#over18'), $('div.pseudocheckbox[data-hidden-field=over18]'))
     }
 
+    // ... and ditto for privacy
     if ($('#privacy').val()) {
         setHiddenField($('#privacy-checkable'), $('div.pseudocheckbox[data-hidden-field=privacy]'))
     }
@@ -46,6 +57,7 @@ $(function () {
     if (showModalOnLoad) {
         $('#myModal').modal('show')
     }
+
 })
 
 // Set the value of a hidden field and the correlated visual state of its corresponding pseudo-checkbox to 'true'
