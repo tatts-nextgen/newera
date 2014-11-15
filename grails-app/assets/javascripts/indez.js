@@ -4,42 +4,42 @@ $(function () {
     // Check to enable/disable submit button every 300ms
     setInterval(checkSubmitButton, 300)
 
-    // Simulate checkboxes with nicer-looking font-awesome icons
-    $('i.checkable').click(function() {
+    // Pseudo-checkbox changes visual state and sets the value of a hidden field
+    $('div.pseudocheckbox').click(function() {
         var t = $(this)
-        t.removeClass('fa-square-o').addClass('fa-square').addClass('black')
-        t.next('i').show()
-        setCorrespondingHiddenFieldValue(t, 'true')
+        var hiddenFieldId = t.attr('data-hidden-field')
+        var hiddenField = $('#' + hiddenFieldId)
+        if (hiddenField.val() == 'true') {
+            unsetHiddenField(hiddenField, t)
+        } else {
+            setHiddenField(hiddenField, t)
+        }
     })
-    $('i.checkmark').click(function() {
-        var t = $(this)
-        t.prev('i').addClass('fa-square-o').removeClass('fa-square').removeClass('black')
-        t.hide()
-        setCorrespondingHiddenFieldValue(t, '')
+
+    // Checkmark, when visible, is in front of the div and "intercepts" the click event
+    $('i.fa-check').click(function(e) {
+        $(this).parent('div.pseudocheckbox').click()
+
+        // don't let the event bubble up to the div, or else it's like the user double-clicked it, i.e. no net effect!
+        e.stopPropagation()
     })
 
     // make text to the right of checkboxes behave like labels
     $('.checkable-label').click(function() {
-        var prevDiv = $(this).prev('div')
-        var checkmark = prevDiv.find('i.checkmark')
-        if (checkmark.is(':visible')) {
-            checkmark.click()
-        } else {
-            prevDiv.find('i.checkable').click()
+        $(this).prev('div').find('div.pseudocheckbox').click()
+
+        // don't tick or untick the checkboxes if the user clicks the privacy links embedded in the checkbox labels
+        if ($(e.target).tagName == 'a') {
+            e.stopPropagation()
         }
     })
 
-    // don't tick or untick the checkboxes if the user clicks the privacy links embedded in the checkbox labels
-    $('.checkable-label a').click(function(e) {
-        e.stopPropagation()
-    })
-
     if ($('#over18').val()) {
-        $('#over18-checkable').click()
+        setHiddenField($('#over18'), $('div.pseudocheckbox[data-hidden-field=over18]'))
     }
 
     if ($('#privacy').val()) {
-        $('#privacy-checkable').click()
+        setHiddenField($('#privacy-checkable'), $('div.pseudocheckbox[data-hidden-field=privacy]'))
     }
 
     // validation errors mean we should show the modal as soon as the page loads
@@ -48,18 +48,23 @@ $(function () {
     }
 })
 
-// Check to enable/disable submit button
-function checkSubmitButton() {
-    if ($('#over18').val() && $('#privacy').val() && $('#name').val() && $('#email').val()) {
-        $('#submit').removeAttr('disabled')
-    } else {
-        $('#submit').attr('disabled', 'disabled')
-    }
+// Set the value of a hidden field and the correlated visual state of its corresponding pseudo-checkbox to 'true'
+function setHiddenField(hiddenField, checkbox) {
+    hiddenField.val('true')
+    checkbox.addClass('checkedx').find('i.fa-check').show()
 }
 
-// Set the value of the hidden field corresponding to one of the faux checkboxes
-function setCorrespondingHiddenFieldValue(t, value) {
-    var hiddenFieldId = t.parent('span').attr('data-hidden-field')
-    var hiddenField = $('#' + hiddenFieldId)
-    hiddenField.val(value)
+// Set the value of a hidden field and the correlated visual state of its corresponding pseudo-checkbox to 'false'
+function unsetHiddenField(hiddenField, checkbox) {
+    hiddenField.val('')
+    checkbox.removeClass('checkedx').find('i.fa-check').hide()
+}
+
+// Check to enable/disable submit button
+function checkSubmitButton() {
+   if ($('#over18').val() && $('#privacy').val() && $('#name').val() && $('#email').val()) {
+        $('#submit').removeAttr('disabled')
+   } else {
+        $('#submit').attr('disabled', 'disabled')
+   }
 }

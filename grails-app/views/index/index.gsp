@@ -24,7 +24,7 @@
 <div class="row" style="margin-top: 20px;">
     <div class="col-xs-offset-3 col-xs-6" style="background-color: white; height: 200px;">&nbsp;</div>
 </div>
-<div class='row' style="margin-top: 20px; ">
+<div class='row' style="margin-top: 20px; margin-bottom: 50px;">
     <div class="col-xs-12 text-center">
         <p id="hearMore" data-toggle="modal" data-target="#myModal">
             <br/>HEAR<br/>MORE
@@ -99,7 +99,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input type="text" id="name" name="name" required="true" placeholder="Name"
-                                           class="form-control" value="${cmd?.name}" tabindex="2"/>
+                                           class="form-control" value="${cmd?.name}" tabindex="2" />
                                 </div>
                                 <span class="help-block">
                                     <small><em>
@@ -134,54 +134,37 @@
 
                     <%-- Over 18 --%>
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('over18')}"/>
+                    <div class="row" style="color: #afafaf; margin-bottom: 10px;">
+                        <div class="col-sm-offset-3 col-xs-1 vcenter">
+                            <div class="pseudocheckbox" data-hidden-field="over18">
+                                <i class="fa fa-check checkmark green"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-xs-10 vcenter checkable-label">
+                            I confirm that I am over 18 years of age
+                        </div>
+                    </div>
                     <g:if test="${hasFieldErrors}">
-                        <div class="row text-danger">
-                            <div class="col-sm-6 col-sm-offset-3 col-xs-12">
-                                <small>
+                        <div class="row" style="position: relative; top: -25px;">
+                            <div class="col-sm-6 col-sm-offset-3 col-xs-10">
+                                <span class="error"><small><em>
                                     <g:eachError bean="${cmd}" field="over18">
                                         <br/><g:message error="${it}"/>
                                     </g:eachError>
-                                </small>
+                                </em></small></span>
                             </div>
                         </div>
                     </g:if>
-                    <div class="row" style="color: #afafaf; margin-bottom: 10px;">
-                        <div class="col-sm-offset-3 col-xs-1 vcenter">
-                            <span class="fa-stack" data-hidden-field="over18">
-                                <i id='over18-checkable' class="fa fa-square-o checkable fa-stack-2x" tabindex="4"></i>
-                                <i class="fa fa-check checkmark green fa-stack-1x"></i>
-                            </span>
-                        </div>
-                        <div class="col-sm-7 col-xs-10 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}"
-                             style="padding-left: 0;">
-                            <span class="checkable-label ${hasFieldErrors ? 'text-danger' : ''}">
-                                I confirm that I am over 18 years of age
-                            </span>
-                        </div>
-                    </div>
 
                     <%-- Privacy --%>
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('privacy')}"/>
-                    <g:if test="${hasFieldErrors}">
-                        <div class="row text-danger">
-                            <div class="col-xs-offset-3 col-xs-6">
-                                <small>
-                                    <g:eachError bean="${cmd}" field="privacy">
-                                        <br/><g:message error="${it}"/>
-                                    </g:eachError>
-                                </small>
-                            </div>
-                        </div>
-                    </g:if>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
                         <div class="col-sm-offset-3 col-xs-1 vcenter">
-                            <span class="fa-stack" data-hidden-field="privacy">
-                                <i id='privacy-checkable' class="fa fa-square-o checkable fa-stack-2x" tabindex="5"></i>
-                                <i class="fa fa-check checkmark green fa-stack-1x"></i>
-                            </span>
+                            <div class="pseudocheckbox" data-hidden-field="privacy">
+                                <i class="fa fa-check checkmark green"></i>
+                            </div>
                         </div>
-                        <div class="col-sm-6 col-xs-9 vcenter checkable-label ${hasFieldErrors ? 'text-danger' : ''}"
-                                style="padding-left: 0;">
+                        <div class="col-sm-6 col-xs-9 vcenter checkable-label">
                             I have read and agree to the
                             <g:link action="privacyStatement" target="_blank">
                                 Privacy Statement
@@ -193,6 +176,17 @@
                             of Tatts Group Limited
                         </div>
                     </div>
+                    <g:if test="${hasFieldErrors}">
+                        <div class="row" style="position: relative; top: -25px;">
+                            <div class="col-sm-6 col-sm-offset-3 col-xs-10">
+                                <span class="error"><small><em>
+                                    <g:eachError bean="${cmd}" field="privacy">
+                                        <br/><g:message error="${it}"/>
+                                    </g:eachError>
+                                </em></small></span>
+                            </div>
+                        </div>
+                    </g:if>
 
                     <div class="row" style="margin-top: 15px;">
                         <div class="col-xs-offset-3 col-xs-6">
