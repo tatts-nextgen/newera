@@ -42,7 +42,7 @@
                     <li class="list-group-item">
                         <span class="badge"><i class="fa fa-sign-out"></i></span>
                         <g:form controller="logout" method="post" role="form">
-                            <input type="submit" class="btn btn-link" style="padding: 0;" value="Logout"/>
+                            <input type="submit" class="btn btn-link green" style="padding: 0;" value="Logout"/>
                         </g:form>
                     </li>
                 </ul>
