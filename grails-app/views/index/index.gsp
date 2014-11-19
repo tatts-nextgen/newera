@@ -135,12 +135,12 @@
                     <%-- Over 18 --%>
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('over18')}"/>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
-                        <div class="col-sm-offset-3 col-xs-1 vcenter">
+                        <div class="col-sm-offset-3 col-sm-1 col-xs-2 vcenter">
                             <div class="pseudocheckbox" data-hidden-field="over18" tabindex="4">
                                 <i class="fa fa-check checkmark green"></i>
                             </div>
                         </div>
-                        <div class="col-sm-7 col-xs-10 vcenter checkable-label">
+                        <div class="col-sm-7 col-xs-9 vcenter checkable-label">
                             I confirm that I am over 18 years of age
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                     <%-- Privacy --%>
                     <g:set var="hasFieldErrors" value="${cmd?.errors?.hasFieldErrors('privacy')}"/>
                     <div class="row" style="color: #afafaf; margin-bottom: 10px;">
-                        <div class="col-sm-offset-3 col-xs-1 vcenter">
+                        <div class="col-sm-offset-3 col-sm-1 col-xs-2 vcenter">
                             <div class="pseudocheckbox" data-hidden-field="privacy" tabindex="5">
                                 <i class="fa fa-check checkmark green"></i>
                             </div>

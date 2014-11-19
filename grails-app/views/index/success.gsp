@@ -22,8 +22,8 @@
 </div>
 <div class='row' style="margin-top: 20px; margin-bottom: 50px;">
     <div class="col-xs-12 text-center">
-        <p id="hearMore" data-toggle="modal" data-target="#myModal">
-            <br/>HEAR<br/>MORE
+        <p>
+            <br/><br/>
         </p>
     </div>
 </div>
