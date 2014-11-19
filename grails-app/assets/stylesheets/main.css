@@ -21,12 +21,21 @@ body {
     font-family: ReplicaPro, Arial, sans-serif;
 }
 
-.green {
+.green, .green.btn-link:hover, .green.btn-link:focus {
     color: #53da3f;
 }
 
 .green-background {
     background-color: #53da3f;
+}
+
+#login {
+    color: #fff;
+    border-color: #53da3f;
+}
+
+#login:hover, #login:focus {
+    color: #000;
 }
 
 a, a:hover, a:focus {
@@ -50,11 +59,6 @@ label {
 
 i.checkmark {
     display: none;
-}
-
-div.checkable-label {
-    cursor: pointer;
-    font-size: 9pt;
 }
 
 .modal-icon {
@@ -99,7 +103,7 @@ span.close {
     font-weight: bold;
 }
 
-.error span.help-block {
+.error span.help-block, span.error {
     color: #e73d3e;
 }
 
@@ -112,14 +116,15 @@ span.close {
     border-color: #fad8d8;
 }
 
-.checkable-label {
-    font-size: 8pt;
-}
-
-input[type=text], input[type=email], span.input-group-addon, i.fa-square {
+input[type=text], input[type=email], span.input-group-addon {
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
+}
+
+i.fa-square, i.fa-square.o {
+    font-weight: lighter;
+    border-radius: 0px;
 }
 
 span.input-group-addon {
@@ -137,4 +142,33 @@ span.input-group-addon {
     height: 100px;
     text-align: center;
     margin: 0 auto;
+}
+
+div.pseudocheckbox {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #afafaf;
+    border-radius: 2px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+/** There are lots of classes called 'checked'.  Use something slightly different to avoid any namespace clashes. */
+div.pseudocheckbox.checkedx {
+    background-color: #000;
+}
+
+div.pseudocheckbox i.fa-check {
+    display: none;
+    z-index: 99;
+    font-size: 18pt;
+    cursor: pointer;
+}
+
+div.checkable-label {
+    cursor: pointer;
+    font-size: 9pt;
+    padding-left: 0;
 }

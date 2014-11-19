@@ -38,7 +38,7 @@
                             <input type="checkbox" name="_spring_security_remember_me"/> Remember me on this device
                         </label>
                     </div>
-                    <input type="submit" class="btn btn-primary pull-right" value="Login"/>
+                    <input type="submit" id="login" class="btn pull-right green-background" value="Login"/>
                 </form>
             </div>
         </div>

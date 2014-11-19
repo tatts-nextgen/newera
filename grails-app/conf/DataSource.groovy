@@ -2,10 +2,10 @@ dataSource {
     dbCreate        = 'none'
     dialect         = org.hibernate.dialect.MySQL5InnoDBDialect
     driverClassName = 'com.mysql.jdbc.Driver'
+    pooled          = true
     url             = 'jdbc:mysql://localhost/newera'
     username        = 'newera'
     password        = 'newera'
-    pooled          = true
 }
 
 hibernate {
@@ -17,17 +17,24 @@ hibernate {
 environments {
     test {
         dataSource {
-            dbCreate = 'update'
-            dialect = org.hibernate.dialect.H2Dialect
+            dbCreate        = 'update'
+            dialect         = org.hibernate.dialect.H2Dialect
             driverClassName = 'org.h2.Driver'
-            username = 'sa'
-            password = ''
-            url = 'jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000'
+            url             = 'jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000'
+            username        = 'sa'
+            password        = ''
         }
     }
 
     production {
         dataSource {
+            // Elastic Beanstalk uses these environment variables to pass RDS connection details
+            final p = System.properties
+            if (p.RDS_DB_NAME) {
+                url = "jdbc:mysql://${p.RDS_HOSTNAME}:${p.RDS_PORT}/${p.RDS_DB_NAME}"
+                username = p.RDS_USERNAME
+                password = p.RDS_PASSWORD
+            }
             properties {
                 jmxEnabled = true
                 initialSize = 5
