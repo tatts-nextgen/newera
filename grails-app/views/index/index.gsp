@@ -11,8 +11,8 @@
     </content>
 </head>
 <body>
-<div class="row" style="margin-top: 100px;">
-    <div class="col-xs-12 text-center green" style="font-size: 22pt; font-weight: bold;">
+<div class="row" style="margin-top: 100px; margin-bottom: 10px;">
+    <div class="col-xs-12 text-center green" style="font-size: 22pt; font-weight: bold; letter-spacing: 4px;">
         WELCOME
     </div>
 </div>
@@ -26,13 +26,13 @@
 </div>
 <div class='row' style="margin-top: 20px; margin-bottom: 50px;">
     <div class="col-xs-12 text-center">
-        <p id="hearMore" data-toggle="modal" data-target="#myModal">
+        <p id="hearMore" data-toggle="modal" data-target="#myModal" style="letter-spacing: 2px;">
             <br/>HEAR<br/>MORE
         </p>
     </div>
 </div>
 <div class="row" style="margin-bottom: 50px;">
-    <div class="col-xs-12 text-center green" style="font-size: 18pt;">
+    <div class="col-xs-12 text-center green" style="font-size: 18pt; letter-spacing: 2px;">
         Coming soon. Watch this space.
     </div>
 </div>
@@ -169,6 +169,7 @@
                             <g:link action="privacyStatement" target="_blank">
                                 Privacy Statement
                             </g:link>
+                            <br/>
                             and
                             <a href="http://www.tattsgroup.com/legal/privacy" target="_blank">
                                 Privacy Policy

@@ -116,10 +116,10 @@ span.close {
     border-color: #fad8d8;
 }
 
-input[type=text], input[type=email], span.input-group-addon {
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+input[type=text], input[type=email], span.input-group-addon, div.modal-content {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
 }
 
 i.fa-square, i.fa-square.o {
@@ -148,7 +148,7 @@ div.pseudocheckbox {
     width: 30px;
     height: 30px;
     border: solid 1px #afafaf;
-    border-radius: 2px;
+    border-radius: 0px;
     background-color: #fff;
     text-align: center;
     padding-top: 3px;
@@ -163,8 +163,10 @@ div.pseudocheckbox.checkedx {
 div.pseudocheckbox i.fa-check {
     display: none;
     z-index: 99;
-    font-size: 18pt;
+    font-size: 12pt;
     cursor: pointer;
+    position: relative;
+    top: 2px;
 }
 
 div.checkable-label {
