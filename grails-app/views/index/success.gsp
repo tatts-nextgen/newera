@@ -7,13 +7,13 @@
 </head>
 <body>
 
-<div class="row" style="margin-top: 100px;">
-    <div class="col-xs-12 text-center green" style="font-size: 22pt; font-weight: bold;">
+<div class="row" style="margin-top: 100px; margin-bottom: 10px;">
+    <div class="col-xs-12 text-center green" style="font-size: 28pt; font-weight: bold;">
         WELCOME
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-12 text-center" style="font-size: 38pt; font-weight: bold;">
+    <div class="col-xs-12 text-center" style="font-size: 48pt; font-weight: bold;">
         READY FOR A NEW ERA<br/>IN BETTING?
     </div>
 </div>
@@ -28,7 +28,7 @@
     </div>
 </div>
 <div class="row" style="margin-bottom: 50px;">
-    <div class="col-xs-12 text-center green" style="font-size: 18pt;">
+    <div class="col-xs-12 text-center green" style="font-size: 26pt; letter-spacing: 2px;">
         Coming soon. Watch this space.
     </div>
 </div>
