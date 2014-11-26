@@ -3,7 +3,15 @@
     <meta name="layout" content="main"/>
 </head>
 <body>
-<div class="row" style="margin-top: 100px;">
+<div class="row" style="margin-top: 40px; margin-bottom: 30px;">
+    <div class="col-xs-12 text-center hidden-xs">
+        <asset:image src="ubet-logo.png"/>
+    </div>
+    <div class="col-xs-12 text-center visible-xs">
+        <asset:image src="ubet-logo.png" style="width: 350px;"/>
+    </div>
+</div>
+<div class="row">
     <div class="col-xs-12 text-center green" style="font-size: 22pt;">
         PRIVACY STATEMENT
     </div>
@@ -14,10 +22,10 @@
     <div class="panel-body">
 
 <p>Tatts Group Limited (ACN 108 686 040) is collecting personal information about you to keep you up to date with details
-about the [New Wagering Brand]. The Tatts Group conducts a number of operations throughout Australia and
+about UBET. The Tatts Group conducts a number of operations throughout Australia and
 internationally, including the operation of regulated lotteries and the conduct of wagering and sports betting.
 If you do not provide us with (and allow us to use) the personal information we have requested we will be unable
-to provide details about the new wagering brand to you.</p>
+to provide details about UBET to you.</p>
 
 <p>Other than as between companies falling under the Tatts Group Limited and as may be required by law,
 a law enforcement body or gambling regulator, we may disclose your personal information to third parties,
