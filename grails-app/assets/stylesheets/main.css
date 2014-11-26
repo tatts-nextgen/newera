@@ -73,7 +73,7 @@ i.checkmark {
     font-weight: 100;
 }
 
-.modal-text {
+p#updated.modal-text {
     font-size: 20px;
     line-height: 24px;
     font-weight: 100;
