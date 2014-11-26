@@ -14,7 +14,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12 text-center" style="font-size: 48pt; font-weight: bold;">
-        READY FOR A NEW ERA<br/>IN BETTING?
+        READY FOR A NEW ERA?
     </div>
 </div>
 <div class="row" style="margin-top: 40px; margin-bottom: 60px;">
