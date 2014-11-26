@@ -150,7 +150,8 @@ grails.plugin.springsecurity.ipRestrictions = [
     '/login/**':  ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32']
 ]
 grails.plugin.springsecurity.secureChannel.definition = [
-    '*': 'REQUIRES_SECURE_CHANNEL'
+    '/':   'REQUIRES_SECURE_CHANNEL',
+    '/**': 'REQUIRES_SECURE_CHANNEL'
 ]
 
 jasypt {
