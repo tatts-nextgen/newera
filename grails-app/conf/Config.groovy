@@ -153,6 +153,7 @@ grails.plugin.springsecurity.secureChannel.definition = [
     '/':   'REQUIRES_SECURE_CHANNEL',
     '/**': 'REQUIRES_SECURE_CHANNEL'
 ]
+grails.plugin.springsecurity.portMapper.httpsPort = '443'
 
 jasypt {
     algorithm = "PBEWITHSHA256AND256BITAES-CBC-BC"
