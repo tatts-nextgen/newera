@@ -26,7 +26,7 @@
         <asset:image src="ubet-logo.png"/>
     </div>
     <div class="col-xs-12 text-center visible-xs">
-        <asset:image src="ubet-logo.png" style="width: 350px;"/>
+        <asset:image src="ubet-logo.png" style="width: 310px;"/>
     </div>
 </div>
 <div class='row' style="margin-top: 20px; margin-bottom: 50px;">
