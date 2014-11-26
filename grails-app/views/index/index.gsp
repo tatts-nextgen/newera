@@ -21,8 +21,13 @@
         READY FOR A NEW ERA<br/>IN BETTING?
     </div>
 </div>
-<div class="row" style="margin-top: 20px;">
-    <div class="col-xs-offset-3 col-xs-6" style="background-color: white; height: 200px;">&nbsp;</div>
+<div class="row" style="margin-top: 40px; margin-bottom: 60px;">
+    <div class="col-xs-12 text-center hidden-xs">
+        <asset:image src="ubet-logo.png"/>
+    </div>
+    <div class="col-xs-12 text-center visible-xs">
+        <asset:image src="ubet-logo.png" style="width: 350px;"/>
+    </div>
 </div>
 <div class='row' style="margin-top: 20px; margin-bottom: 50px;">
     <div class="col-xs-12 text-center">

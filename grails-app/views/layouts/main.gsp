@@ -5,9 +5,10 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=10; IE=9; IE=8; IE=7; chrome=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Ready for a New Era"/></title>
+        <meta name="description" content="Watch this Space, UBET is Coming Soon. Register Now to Hear More.">
+		<title>UBET | Ready For A New Era In Betting?</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">

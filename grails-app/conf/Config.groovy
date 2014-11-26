@@ -143,6 +143,12 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll'],
     '/report/**':                     ['IS_AUTHENTICATED_REMEMBERED']
 ]
+grails.plugin.springsecurity.ipRestrictions = [
+    '/report':    ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32'],
+    '/report/**': ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32'],
+    '/login':     ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32'],
+    '/login/**':  ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32']
+]
 
 jasypt {
     algorithm = "PBEWITHSHA256AND256BITAES-CBC-BC"

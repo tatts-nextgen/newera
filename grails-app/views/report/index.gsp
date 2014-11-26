@@ -3,9 +3,12 @@
     <meta name="layout" content="main"/>
 </head>
 <body>
-<div class="row" style="margin-top: 100px;">
-    <div class="col-xs-12 text-center green" style="font-size: 22pt;">
-        NEW ERA IN BETTING - REPORTS
+<div class="row" style="margin-top: 40px; margin-bottom: 60px;">
+    <div class="col-xs-12 text-center hidden-xs">
+        <asset:image src="ubet-logo.png"/>
+    </div>
+    <div class="col-xs-12 text-center visible-xs">
+        <asset:image src="ubet-logo.png" style="width: 350px;"/>
     </div>
 </div>
 <div class="row" style="margin-top: 100px;">
