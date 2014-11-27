@@ -4,7 +4,7 @@ class IndexController {
 
     def registrationService
 
-    def index() {}
+    def index() { }
 
     def register(RegistrationCommand cmd) {
         if (cmd.validate()) {

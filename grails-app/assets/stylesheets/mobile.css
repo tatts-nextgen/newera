@@ -79,4 +79,99 @@
 	.error ul {
 		margin-left: 0;
 	}
+
+    .row.welcome {
+        margin-top: 20px;
+    }
+
+    .row.welcome div {
+        font-size: 20pt;
+    }
+
+    .row.logo img {
+        width: 300px;
+    }
+
+    .row.ready div {
+        font-size: 28pt;
+    }
+
+    .row.logo {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .row.hear-more {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .row.coming-soon {
+        margin-bottom: 10px;
+    }
+
+    .row.coming-soon div {
+        font-size: 18pt;
+    }
+
+    footer {
+        font-size: 8pt;
+        margin-bottom: 0;
+    }
+
+    div.modal-content {
+        height: 500px;
+    }
+
+    div.modal-dialog {
+        margin-bottom: 0;
+    }
+
+    div.modal-body {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    div.modal-body div.text-center p {
+        font-size: 14pt;
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+
+    div.modal-body img {
+        width: 80px;
+    }
+
+    label {
+        font-size: 8pt;
+    }
+
+    div.row.over18 {
+        color: #afafaf;
+        margin-bottom: 10px;
+    }
+
+    div.row.over18-errors {
+        position: relative;
+        top: -25px;
+    }
+
+    div.row.privacy {
+        color: #afafaf;
+        margin-bottom: 5px;
+    }
+
+    div.row.privacy-errors {
+        position: relative;
+        top: -25px;
+    }
+
+    div.row.submit {
+        margin-top: 5px;
+    }
+
+    input#submit {
+        margin-bottom: 0;
+        width: 100%;
+    }
 }

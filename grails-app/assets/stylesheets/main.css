@@ -73,7 +73,7 @@ i.checkmark {
     font-weight: 100;
 }
 
-.modal-text {
+p#updated.modal-text {
     font-size: 20px;
     line-height: 24px;
     font-weight: 100;
@@ -132,18 +132,6 @@ span.input-group-addon {
     color: #53da3f;
 }
 
-#hearMore {
-    cursor: pointer;
-    border-radius: 100%;
-    border: 2px solid #fff;
-    padding-top: 7px;
-    font-weight: bold;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    margin: 0 auto;
-}
-
 div.pseudocheckbox {
     width: 30px;
     height: 30px;
@@ -173,4 +161,113 @@ div.checkable-label {
     cursor: pointer;
     font-size: 9pt;
     padding-left: 0;
+}
+
+/** These classes define spacing and font size on the main and success pages.  Override them for phones in mobile.css. */
+
+.row.welcome {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.row.welcome div {
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+.row.ready div {
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+.row.logo {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.row.hear-more {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.row.hear-more p {
+    padding-top: 7px;
+    font-weight: bold;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.row.hear-more p#hearMore {
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+}
+
+.row.hear-more div {
+    letter-spacing: 2px;
+}
+
+.row.coming-soon {
+    margin-bottom: 50px;
+}
+
+.row.coming-soon div {
+    font-size: 26pt;
+    letter-spacing: 2px;
+}
+
+footer {
+    text-align: center;
+    color: #5f5f58;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #5f5f58;
+}
+
+div.modal-content {
+    height: 625px;
+}
+
+div.modal-body {
+    margin-top: 10px;
+}
+
+div.modal-body div.text-center p {
+    color: #afafaf;
+    font-size: 18pt;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+div.row.over18 {
+    color: #afafaf;
+    margin-bottom: 10px;
+}
+
+div.row.over18-errors {
+    position: relative;
+    top: -25px;
+}
+
+div.row.privacy {
+    color: #afafaf;
+    margin-bottom: 10px;
+}
+
+div.row.privacy-errors {
+    position: relative;
+    top: -25px;
+}
+
+div.row.submit {
+    margin-top: 15px;
+}
+
+input#submit {
+    margin-bottom: 25px;
+    width: 100%;
 }
