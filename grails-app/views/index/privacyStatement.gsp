@@ -1,6 +1,8 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
+    <meta name="description" content="Visit UBET online today to view our Privacy Statement.">
+    <title>UBET | Privacy Statement</title>
 </head>
 <body>
 <div class="row" style="margin-top: 40px; margin-bottom: 30px;">

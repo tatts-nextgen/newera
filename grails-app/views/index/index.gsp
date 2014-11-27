@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
+    <meta name="description" content="Watch this Space, UBET is Coming Soon. Register Now to Hear More.">
     <content tag="scripts">
         <asset:javascript src="indez.js"/>
         <g:if test="${cmd?.hasErrors()}">
