@@ -142,7 +142,7 @@
                             </div>
                         </div>
                         <div class="col-sm-7 col-xs-9 vcenter checkable-label">
-                            I confirm that I am over 18 years of agex
+                            I confirm that I am over 18 years of age
                         </div>
                     </div>
                     <g:if test="${hasFieldErrors}">
