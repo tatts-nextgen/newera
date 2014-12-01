@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jgaines
-  Date: 1/12/14
-  Time: 9:42 AM
---%>
-
-<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-  <title></title>
+    <meta name="layout" content="main"/>
+    <title>Page Not Found</title>
 </head>
+
 <body>
+<div class="row welcome">
+    <div class="col-xs-12 text-center green">
+        PAGE NOT FOUND
+    </div>
+</div>
+<div class="row logo">
+    <div class="col-xs-12 text-center">
+        <asset:image src="ubet-logo.png"/>
+    </div>
+</div>
+<div class="row coming-soon">
+    <div class="col-xs-12 text-center green">
+        <g:link controller="index">Go to the UBET.COM Home Page</g:link>
+    </div>
+</div>
 
 </body>
 </html>

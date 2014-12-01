@@ -44,12 +44,10 @@
         Think! About your choices.<br/>
         Call your state based gambling help services on 1800 858 858.  In NSW visit
         <a href="http://www.gamblinghelp.nsw.gov.au" target="_blank">
-            www.gamblinghelp.nsw.gov.au
-        </a>.
-        In WA visit
+            www.gamblinghelp.nsw.gov.au</a>.
+    In WA visit
         <a href="http://www.gamblinghelponline.org.au" target="_blank">
-            www.gamblinghelponline.org.au
-        </a>.<br/>
+            www.gamblinghelponline.org.au</a>.<br/>
         Think of the people who need your support.  Gamble Responsibly.
     </span>
 </footer>
