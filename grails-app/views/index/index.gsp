@@ -4,11 +4,11 @@
     <meta name="description" content="Watch this Space, UBET is Coming Soon. Register Now to Hear More.">
     <content tag="scripts">
         <asset:javascript src="indez.js"/>
-        <g:if test="${cmd?.hasErrors()}">
-            <script type="text/javascript">
-                showModalOnLoad = true
-            </script>
-        </g:if>
+        <script type="text/javascript">
+            showModalOnLoad = ${cmd?.hasErrors() ? true : false}
+            useModal = ${useModal}
+            mobileFormUrl = '<g:createLink action="mobile"/>'
+        </script>
     </content>
 </head>
 <body>
@@ -29,7 +29,7 @@
 </div>
 <div class='row hear-more'>
     <div class="col-xs-12 text-center">
-        <p id="hearMore" data-toggle="modal" data-target="#myModal">
+        <p id="hearMore">
             <br/>HEAR<br/>MORE
         </p>
     </div>

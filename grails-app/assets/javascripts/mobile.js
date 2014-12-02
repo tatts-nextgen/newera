@@ -1,5 +1,3 @@
-var useModal, showModalOnLoad, mobileFormUrl
-
 $(function () {
     // Check to enable/disable submit button every 300ms
     setInterval(checkSubmitButton, 300)
@@ -52,23 +50,6 @@ $(function () {
     if ($('#privacy').val()) {
         setHiddenField($('#privacy-checkable'), $('div.pseudocheckbox[data-hidden-field=privacy]'))
     }
-
-    // are we using the modal or clicking through to a separate page?
-    if (useModal) {
-        $('#hearMore').click(function() {
-            $('#myModal').modal('toggle')
-        })
-        // validation errors mean we should show the modal as soon as the page loads
-        if (showModalOnLoad) {
-            $('#myModal').modal('show')
-        }
-    } else {
-        $('#hearMore').click(function() {
-            window.location = mobileFormUrl
-        })
-    }
-
-
 })
 
 // Set the value of a hidden field and the correlated visual state of its corresponding pseudo-checkbox to 'true'
