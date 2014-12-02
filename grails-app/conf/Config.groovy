@@ -147,6 +147,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 
+environments {
+    production {
+
 grails.plugin.springsecurity.ipRestrictions = [
     '/report':    ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32'],
     '/report/**': ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32'],
@@ -154,8 +157,6 @@ grails.plugin.springsecurity.ipRestrictions = [
     '/login/**':  ['203.3.76.8/32', '203.3.76.136/32', '202.177.218.91/32', '202.79.203.43/32']
 ]
 
-environments {
-    production {
         grails.plugin.springsecurity.secureChannel.definition = [
             '/':   'REQUIRES_SECURE_CHANNEL',
             '/**': 'REQUIRES_SECURE_CHANNEL'
