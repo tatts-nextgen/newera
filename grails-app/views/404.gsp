@@ -17,7 +17,7 @@
 </div>
 <div class="row coming-soon">
     <div class="col-xs-12 text-center green">
-        <g:link controller="index">Go to the UBET.COM Home Page</g:link>
+        <g:link controller="index">Go to the UBET Home Page</g:link>
     </div>
 </div>
 
