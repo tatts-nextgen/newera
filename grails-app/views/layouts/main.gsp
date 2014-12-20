@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge; IE=10; IE=9; IE=8; IE=7; chrome=1"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title><g:layoutTitle default="UBET | Ready For A New Era In Betting?"/></title>
+		<title><g:layoutTitle default="UBET | Ready For A New Era?"/></title>
         <meta name="google-site-verification" content="mExr7rd3h2gLcjo64WnnXBO17HvdybATTa9qh0rvY9Q" />
         <link rel="canonical" href="https://ubet.com/">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
